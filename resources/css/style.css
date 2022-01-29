@@ -29,10 +29,8 @@ html, body {
   min-width: 960px;
 }
 .banner {
-  /* Here's the trick */
   background: var(--image-url) center center;
   background-size: cover;
-  /* Here's the same styles we applied to our content-div earlier */
   color: white;
   min-height: 30vh;
   display: flex;
@@ -125,7 +123,7 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* Add a hover effect if you want */
+/* Add a hover effect */
 .fa:hover {
   opacity: 0.7;
 }
