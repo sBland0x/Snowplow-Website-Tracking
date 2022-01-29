@@ -1,0 +1,31 @@
+.products {
+    max-width: 300px;
+    text-align: center;
+    font-family: Roboto;
+    border: 1px solid #fff;
+    border-radius: 5px !important;
+    margin: 15px 1vw;
+    box-shadow: 5px 5px 10px 1px #232323;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+    font-family: Roboto;
+  }
+  
+  .products button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #094074;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }

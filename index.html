@@ -5,13 +5,12 @@
 
 <head>
   <title>Gadgets and Gizmos</title>
-  <link type="text/css" rel="stylesheet" href="style.css" />
+  <link type="text/css" rel="stylesheet" href="resources/css/style.css" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="fontawesome-free-5.6.3-web/css/all.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,11 +18,11 @@
   ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
         p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
         };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-        n.src=w;g.parentNode.insertBefore(n,g)}}(window, document, "script", 'js/sp.js', "snowplow")); 
+        n.src=w;g.parentNode.insertBefore(n,g)}}(window, document, "script", 'resources/js/sp.js', "snowplow")); 
 
     window.snowplow('newTracker', 'spmicro', '127.0.0.1:9090', {
       encodeBase64: false,  
-      appId: 'sh0pspr33',
+      appId: 'sh0pp1ng',
       platform: "web",
       discoverRootDomain: true,
       eventMethod: 'beacon'
@@ -55,7 +54,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <img class="logo" src="logo.png" alt="">
+          <img class="logo" src="resources/images/logo.png" alt="">
           <!-- Declares the class logo which refers to the logo image, this can then be called upon inside of the code with 'logo' -->
           <a class="navbar-brand" href=""><img src=logo alt=""></a>
 
@@ -80,7 +79,7 @@
 <!-- Creates a container  -->
   <div class="container">
     <div class="row"> <!-- Creates a row class -->
-      <div class="banner" style="--image-url:url(bannerc.png)"> <!-- Adds in an image for the banner -->
+      <div class="banner" style="--image-url:url(resources/images/bannerc.png)"> <!-- Adds in an image for the banner -->
         <h1>Gadgets & Gizmos</h1> <!-- Places a header over the top over the banner image -->
       </div>
       <div id="dealsofthemonth">
@@ -96,15 +95,15 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="wrist-watches.jpg" alt="watches"> <!-- Imports the images to the carousel slides -->
+              <img src="resources/images/wrist-watches.jpg" alt="watches"> <!-- Imports the images to the carousel slides -->
             </div>
 
             <div class="item">
-              <img src="drone-knoll-flatlay.jpg" alt="drone">
+              <img src="resources/images/drone-knoll-flatlay.jpg" alt="drone">
             </div>
 
             <div class="item">
-              <img src="black-and-yellow-earbuds.jpg" alt="airpod">
+              <img src="resources/images/black-and-yellow-earbuds.jpg" alt="airpod">
             </div>
           </div>
 
@@ -122,35 +121,35 @@
     </div>
     <!-- Creates a container for the item panels -->
     <div class="container items">
-      <a class="itempanel" href='light-up-sneakers.html'>  <!-- Creates an item panel that links to the page -->
+      <a class="itempanel" href='products.html'>  <!-- Creates an item panel that links to the page -->
         <div class="itemheader">New Years Sale</div> <!-- The panel header -->
-        <img class="itemimg img-responsive" src="light-up-sneakers.png" alt="lightsneaker"> <!--The pannel image -->
+        <img class="itemimg img-responsive" src="resources/images/light-up-sneakers.png" alt="lightsneaker"> <!--The pannel image -->
         <div class="itemfooter">Light-Up Sneakers</div> <!-- The panel footer -->
       </a>
-      <a class="itempanel" href='fitnesstracker.html'>
+      <a class="itempanel" href='products.html'>
         <div class="itemheader">New Years Sale</div>
-        <img class="itemimg img-responsive" src="aliexpress-fitness-trackers.jpg" alt="lightsneaker">
-        <div class="itemfooter">Light-Up Sneakers</div>
+        <img class="itemimg img-responsive" src="resources/images/aliexpress-fitness-trackers.jpg" alt="lightsneaker">
+        <div class="itemfooter">Fitness Tracker</div>
       </a>
-      <a class="itempanel" href='iphonecable.html'>
+      <a class="itempanel" href='products.html'>
         <div class="itemheader">New Years Sale</div>
-        <img class="itemimg img-responsive" src="black-braided-iphone-cable.png" alt="lightsneaker">
-        <div class="itemfooter">Light-Up Sneakers</div>
+        <img class="itemimg img-responsive" src="resources/images/black-braided-iphone-cable.png" alt="lightsneaker">
+        <div class="itemfooter">IPhone Cable</div>
       </a>
-        <a class="itempanel" href='stunt-drone.html'>
+        <a class="itempanel" href='products.html'>
           <div class="itemheader">New Years Sale</div>
-          <img class="itemimg img-responsive" src="stunt-drone.jpg" alt="lightsneaker">
-          <div class="itemfooter">Light-Up Sneakers</div>
+          <img class="itemimg img-responsive" src="resources/images/stunt-drone.jpg" alt="lightsneaker">
+          <div class="itemfooter">Stunt drone</div>
         </a>
-        <a class="itempanel" href='wireless-headphones.html'>
+        <a class="itempanel" href='products.html'>
           <div class="itemheader">New Years Sale</div>
-          <img class="itemimg img-responsive" src="wireless-headphones.jpg" alt="lightsneaker">
-          <div class="itemfooter">Light-Up Sneakers</div>
+          <img class="itemimg img-responsive" src="resources/images/wireless-headphones.jpg" alt="lightsneaker">
+          <div class="itemfooter">Wireless Headphones</div>
         </a>
-        <a class="itempanel" href='three-plug-in-speaers 2.html'>
+        <a class="itempanel" href='products.html'>
           <div class="itemheader">New Years Sale</div>
-          <img class="itemimg img-responsive" src="three-plug-in-speaers 2.jpg" alt="lightsneaker">
-          <div class="itemfooter">Light-Up Sneakers</div>
+          <img class="itemimg img-responsive" src="resources/images/three-plug-in-speaers 2.jpg" alt="lightsneaker">
+          <div class="itemfooter">Plug in speaker</div>
         </a>
       </div>
       </div>
@@ -160,7 +159,6 @@
         <div class="container top-footer p-md-3 p-1"> <!-- Creates the top part of the footer -->
           <div class="row-footer">
             <div class="col-md-3 pl-4 pr-4"> <!-- Creates the position inside of the footer -->
-              <img class="img-fluid" src="imgs/logo_text_white_small.png" alt="">
               <h3>
                 About us <!-- Creates a header -->
               </h3>
