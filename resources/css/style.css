@@ -39,6 +39,8 @@ html, body {
   z-index: -1;
   font-family: 'Poppins', sans-serif;
 }
+.banner{background-image: url("resources\images\banner.png");}
+
 
 /* Remove the jumbotron's default bottom margin */
 .jumbotron {

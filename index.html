@@ -6,6 +6,8 @@
 <head>
   <title>Gadgets and Gizmos</title>
   <link type="text/css" rel="stylesheet" href="resources/css/style.css" />
+  <script src="resources/js/store.js" async></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,28 +17,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" async=1>
-  ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
-        p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
-        };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-        n.src=w;g.parentNode.insertBefore(n,g)}}(window, document, "script", 'resources/js/sp.js', "snowplow")); 
+    ;
+    (function (p, l, o, w, i, n, g) {
+      if (!p[i]) {
+        p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+        p.GlobalSnowplowNamespace.push(i);
+        p[i] = function () {
+          (p[i].q = p[i].q || []).push(arguments)
+        };
+        p[i].q = p[i].q || [];
+        n = l.createElement(o);
+        g = l.getElementsByTagName(o)[0];
+        n.async = 1;
+        n.src = w;
+        g.parentNode.insertBefore(n, g)
+      }
+    }(window, document, "script", 'resources/js/sp.js', "snowplow"));
 
     window.snowplow('newTracker', 'spmicro', '127.0.0.1:9090', {
-      encodeBase64: false,  
+      encodeBase64: false,
       appId: 'sh0pp1ng',
       platform: "web",
       discoverRootDomain: true,
       eventMethod: 'beacon'
-});
+    });
 
     window.snowplow('setUserID', 'tester');
 
-    window.snowplow('enableActivityTracking',{
+    window.snowplow('enableActivityTracking', {
       minimumVisitLength: 20,
       heartbeatDelay: 20
     });
 
+
+
     window.snowplow('trackPageView');
-    </script>
+  </script>
+  <style>
+    div.banner {
+   width:100%; /*width of your image*/
+   height:100px; /*height of your image*/
+   background-image:url('resources/images/banner.png');
+   margin:0; /* If you want no margin */
+   padding:0; /*if your want to padding */
+}
+  </style>
 </head>
 
 
@@ -63,30 +88,34 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li> <!-- Creating each button on the navbar -->
-            <li><a href="products.html">Products</a></li> <!--Links to the page relating to the button-->
+            <li><a href="products.html">Products</a></li>
+            <!--Links to the page relating to the button-->
             <li><a href="deals.html">Deals</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="contact.html">About Us</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="account.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+            <li><a href="products.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-<!-- Creates a container  -->
+  <!-- Creates a container  -->
   <div class="container">
-    <div class="row"> <!-- Creates a row class -->
-      <div class="banner" style="--image-url:url(resources/images/bannerc.png)"> <!-- Adds in an image for the banner -->
+    <div class="row">
+      <!-- Creates a row class -->
+      <div class="banner">
+        <!-- Adds in an image for the banner -->
         <h1>Gadgets & Gizmos</h1> <!-- Places a header over the top over the banner image -->
       </div>
       <div id="dealsofthemonth">
         <h2>Deals of the month</h2> <!-- Creates a header -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel"> <!-- Defines the carosel class and id -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Defines the carosel class and id -->
           <!-- Defines the carousel indicators -->
-          <ol class="carousel-indicators"> 
+          <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li> <!-- Adds slides to the carosel -->
@@ -95,7 +124,8 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="resources/images/wrist-watches.jpg" alt="watches"> <!-- Imports the images to the carousel slides -->
+              <img src="resources/images/wrist-watches.jpg" alt="watches">
+              <!-- Imports the images to the carousel slides -->
             </div>
 
             <div class="item">
@@ -112,7 +142,7 @@
             <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next" >
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
           </a>
@@ -121,9 +151,11 @@
     </div>
     <!-- Creates a container for the item panels -->
     <div class="container items">
-      <a class="itempanel" href='products.html'>  <!-- Creates an item panel that links to the page -->
+      <a class="itempanel" href='products.html'>
+        <!-- Creates an item panel that links to the page -->
         <div class="itemheader">New Years Sale</div> <!-- The panel header -->
-        <img class="itemimg img-responsive" src="resources/images/light-up-sneakers.png" alt="lightsneaker"> <!--The pannel image -->
+        <img class="itemimg img-responsive" src="resources/images/light-up-sneakers.png" alt="lightsneaker">
+        <!--The pannel image -->
         <div class="itemfooter">Light-Up Sneakers</div> <!-- The panel footer -->
       </a>
       <a class="itempanel" href='products.html'>
@@ -136,79 +168,89 @@
         <img class="itemimg img-responsive" src="resources/images/black-braided-iphone-cable.png" alt="lightsneaker">
         <div class="itemfooter">IPhone Cable</div>
       </a>
-        <a class="itempanel" href='products.html'>
-          <div class="itemheader">New Years Sale</div>
-          <img class="itemimg img-responsive" src="resources/images/stunt-drone.jpg" alt="lightsneaker">
-          <div class="itemfooter">Stunt drone</div>
-        </a>
-        <a class="itempanel" href='products.html'>
-          <div class="itemheader">New Years Sale</div>
-          <img class="itemimg img-responsive" src="resources/images/wireless-headphones.jpg" alt="lightsneaker">
-          <div class="itemfooter">Wireless Headphones</div>
-        </a>
-        <a class="itempanel" href='products.html'>
-          <div class="itemheader">New Years Sale</div>
-          <img class="itemimg img-responsive" src="resources/images/three-plug-in-speaers 2.jpg" alt="lightsneaker">
-          <div class="itemfooter">Plug in speaker</div>
-        </a>
-      </div>
+      <a class="itempanel" href='products.html'>
+        <div class="itemheader">New Years Sale</div>
+        <img class="itemimg img-responsive" src="resources/images/stunt-drone.jpg" alt="lightsneaker">
+        <div class="itemfooter">Stunt drone</div>
+      </a>
+      <a class="itempanel" href='products.html'>
+        <div class="itemheader">New Years Sale</div>
+        <img class="itemimg img-responsive" src="resources/images/wireless-headphones.jpg" alt="lightsneaker">
+        <div class="itemfooter">Wireless Headphones</div>
+      </a>
+      <a class="itempanel" href='products.html'>
+        <div class="itemheader">New Years Sale</div>
+        <img class="itemimg img-responsive" src="resources/images/three-plug-in-speaers 2.jpg" alt="lightsneaker">
+        <div class="itemfooter">Plug in speaker</div>
+      </a>
+    </div>
+  </div>
+  </div>
+
+  <footer class="full-footer fixed-bottom">
+    <!-- Starts the footer 'p-md-3' refers to the spacing of the elements inside of the container -->
+    <div class="container top-footer p-md-3 p-1">
+      <!-- Creates the top part of the footer -->
+      <div class="row-footer">
+        <div class="col-md-3 pl-4 pr-4">
+          <!-- Creates the position inside of the footer -->
+          <h3>
+            About us
+            <!-- Creates a header -->
+          </h3>
+          <p>
+            Gadgets and Gizmos is the home to all things fun, find the inner child inside yourself and discover our wide
+            range
+            of fun and interesting products</a>
+          </p>
+          <a style="color:silver;" class="p-1" href="#"><i class="fa fa-facebook"></i></a>
+          <!-- Adds social media buttons with favicons-->
+          <a style="color: silver;" class="p-1" href="#"><i class="fa fa-google"></i></a>
+          <a style="color: silver;" class="p-1" href="#"><i class="fa fa-twitter"></i></a>
+          <a style="color: silver;" class="p-1" href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+
+        <div class="col-md-3  pl-4 pr-4">
+          <!-- Defines the spacing of the footer links -->
+          <h3>Important Links</h3> <!-- Creates a list with links -->
+          <a class="footlink" href="#">Help</a>
+          <a class="footlink" href="#">Returns & Refunds</a>
+          <a class="footlink" href="#">Track Order </a>
+          <a class="footlink" href="#">Student Discount</a>
+          <a class="footlink" href="#">Contact</a>
+        </div>
+
+        <div class="col-md-3  pl-4 pr-4">
+          <h3>Our Services</h3>
+          <a class="footlink" href="#">Products</a> <!-- More clickable links which can take you to other pages-->
+          <a class="footlink" href="#">Deals</a>
+          <a class="footlink" href="#">Contact</a>
+          <a class="footlink" href="#">About us</a>
+          <a class="footlink" href="#">Investors</a>
+        </div>
+
+        <div class="col-md-3  pl-4 pr-4">
+          <h3>Contact Us</h3> <!-- Below creates the glyphicons along with the number and email, with a mail to -->
+          <a href="#"><i class="glyphicon glyphicon-earphone"></i> +(44) 1111111111 </a><br>
+          <a href="mailto:g&g@gadgets.com  "><i class="glyphicon glyphicon-envelope"></i> g&g@gadgets.com </a><br>
+          <div class="embed-responsive embed-responsive-16by9">
+            <!-- Creates a responsive google maps embed -->
+            <iframe class="embed-responsive-item"
+              src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+          </div>
+
+        </div>
       </div>
     </div>
-    
-      <footer class ="full-footer fixed-bottom"> <!-- Starts the footer 'p-md-3' refers to the spacing of the elements inside of the container -->
-        <div class="container top-footer p-md-3 p-1"> <!-- Creates the top part of the footer -->
-          <div class="row-footer">
-            <div class="col-md-3 pl-4 pr-4"> <!-- Creates the position inside of the footer -->
-              <h3>
-                About us <!-- Creates a header -->
-              </h3>
-              <p>
-                Gadgets and Gizmos is the home to all things fun, find the inner child inside yourself and discover our wide range
-                of fun and interesting products</a>
-              </p>
-              <a style="color:silver;" class="p-1" href="#"><i class="fa fa-facebook"></i></a> <!-- Adds social media buttons with favicons-->
-              <a style="color: silver;" class="p-1" href="#"><i class="fa fa-google"></i></a>
-              <a style="color: silver;" class="p-1" href="#"><i class="fa fa-twitter"></i></a>
-              <a style="color: silver;" class="p-1" href="#"><i class="fa fa-instagram"></i></a>
-            </div>
-
-            <div class="col-md-3  pl-4 pr-4"> <!-- Defines the spacing of the footer links -->
-              <h3>Important Links</h3> <!-- Creates a list with links -->
-              <a class="footlink" href="#">Help</a>
-              <a class="footlink" href="#">Returns & Refunds</a>
-              <a class="footlink" href="#">Track Order </a>
-              <a class="footlink" href="#">Student Discount</a>
-              <a class="footlink" href="#">Contact</a>
-            </div>
-
-            <div class="col-md-3  pl-4 pr-4">
-              <h3>Our Services</h3>
-              <a class="footlink" href="#">Products</a> <!-- More clickable links which can take you to other pages-->
-              <a class="footlink" href="#">Deals</a>
-              <a class="footlink" href="#">Contact</a>
-              <a class="footlink" href="#">About us</a>
-              <a class="footlink" href="#">Investors</a>
-            </div>
-
-            <div class="col-md-3  pl-4 pr-4">
-              <h3>Contact Us</h3> <!-- Below creates the glyphicons along with the number and email, with a mail to -->
-              <a href="#"><i class="glyphicon glyphicon-earphone"></i> +(44) 1111111111 </a><br> 
-              <a href="mailto:g&g@gadgets.com  "><i class="glyphicon glyphicon-envelope"></i> g&g@gadgets.com </a><br>
-              <div class="embed-responsive embed-responsive-16by9"> <!-- Creates a responsive google maps embed -->
-                <iframe class="embed-responsive-item" src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
-              </div>
-
-            </div>
-          </div>
+    <div class="container-fluid bottom-footer pt-2">
+      <!-- Creates the bottom container for the lower footer -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <p>Copyrights © 2022 - All rights reserved</p> <!-- Contained in the lower footer is the copy right info -->
         </div>
-        <div class="container-fluid bottom-footer pt-2"> <!-- Creates the bottom container for the lower footer -->
-          <div class="row">
-            <div class="col-12 text-center">
-              <p>Copyrights © 2022 - All rights reserved</p> <!-- Contained in the lower footer is the copy right info -->
-            </div>
-          </div>
-        </div>
-      </footer>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

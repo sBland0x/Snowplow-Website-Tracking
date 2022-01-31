@@ -6,6 +6,7 @@
     border-radius: 5px !important;
     margin: 15px 1vw;
     box-shadow: 5px 5px 10px 1px #232323;
+    display: flex;
   }
   
   .price {
@@ -28,4 +29,13 @@
   
   .card button:hover {
     opacity: 0.7;
+  }
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 2em;
+  }
+
+  .box :first-child {
+      align-self: center;
   }
