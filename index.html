@@ -39,20 +39,32 @@
       appId: 'sh0pp1ng',
       platform: "web",
       discoverRootDomain: true,
-      eventMethod: 'beacon'
+      eventMethod: 'beacon',
+      platform: 'web',
+      cookieName: 'choc',
+      cookieSameSite: 'Lax',
+      cookieSecure: true,
+      encodeBase64: true,
+      respectDoNotTrack: false,
+      cookieLifetime: 999999999,
+      stateStorageStrategy: 'cookieAndLocalStorage',
+      crossDomainLinker: function (linkElement) {
+    return true;
+  },
     });
 
     window.snowplow('setUserID', 'tester');
 
     window.snowplow('enableActivityTracking', {
       minimumVisitLength: 20,
-      heartbeatDelay: 20
+      heartbeatDelay: 20  
     });
 
 
 
     window.snowplow('trackPageView');
   </script>
+
   <style>
     div.banner {
    width:100%; /*width of your image*/
