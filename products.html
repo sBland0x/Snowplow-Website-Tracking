@@ -51,8 +51,6 @@
       heartbeatDelay: 20
     });
 
-
-
     window.snowplow('trackPageView');
 
     window.snowplow('trackSelfDescribingEvent','shop-item-title','shop-item-button'),{
@@ -60,6 +58,9 @@
     
     window.snowplow('enableLinkClickTracking',{'blacklist': 'barred'});
 
+    window.snowplow('enableErrorTracking')
+
+    
   </script>
 
   <style>
