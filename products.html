@@ -54,6 +54,12 @@
 
 
     window.snowplow('trackPageView');
+
+    window.snowplow('trackSelfDescribingEvent','shop-item-title','shop-item-button'),{
+    }
+    
+    window.snowplow('enableLinkClickTracking',{'blacklist': 'barred'});
+
   </script>
 
   <style>
@@ -113,7 +119,7 @@
         <img class="shop-item-image" src="resources/images/light-up-sneakers.png" alt="lightsneaker" style="width: 100%;height: 250px;">
         <div class="shop-item-details">
           <span class="shop-item-price"><h2>$39.99</h2></span>
-          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO BASKET</button>
         </div>
       </div>
 
@@ -125,7 +131,7 @@
         <img class="shop-item-image" src="resources/images/aliexpress-fitness-trackers.jpg" alt="FitnessTracker"style="width: 100%;height: 250px;">
         <div class="shop-item-details">
           <span class="shop-item-price"><h2>$19.99</h2></span>
-          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO BASKET</button>
         </div>
       </div>
 
@@ -134,7 +140,7 @@
         <img class="shop-item-image" src="resources/images/black-braided-iphone-cable.png" alt="phonecable"style="width: 100%;height: 250px;">
         <div class="shop-item-details">
           <span class="shop-item-price"><h2>$9.99</h2></span>
-          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO BASKET</button>
         </div>
       </div>
 
@@ -143,7 +149,7 @@
         <img class="shop-item-image" src="resources/images/stunt-drone.jpg" alt="stuntdrone"style="width: 100%;height: 250px;">
         <div class="shop-item-details">
           <span class="shop-item-price"><h2>$59.99</h2></span>
-          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO BASKET</button>
         </div>
       </div>
 
@@ -157,7 +163,7 @@
           <span class="shop-item-price">
             <h2>$99.99</h2>
           </span>
-          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO BASKET</button>
         </div>
       </div>
 
@@ -168,7 +174,7 @@
         <img class="shop-item-image" src="resources/images/three-plug-in-speaers 2.jpg" alt="three-plug-in-speaers" style="width: 100%;height: 250px;">
         <div class="shop-item-details">
           <span class="shop-item-price"><h2>$24.99</h2></span>
-          <div><button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button></div>
+          <div><button class="btn btn-primary shop-item-button" type="button">ADD TO BASKET</button></div>
         </div>
       </div>
     </div>
