@@ -1,0 +1,21 @@
+{
+"$schema": "",
+"description": "Schema for JS basket",
+"self": {
+"vendor": "test.samuel",
+"name": "purchasing_product",
+"format": "jsonschema",
+"version": "1-0-0"
+},
+"total":{
+"type": "number",
+"minimum": 0,
+"maximum": 50000,
+"multipleOf": 0.01
+ }
+},
+
+"additionalProperties": false,
+"required": ["Total"]
+]
+}
