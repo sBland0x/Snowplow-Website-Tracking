@@ -1,5 +1,5 @@
 {
-"$schema": "",
+"$schema": "https://github.com/sBland0x/Snowplow-Website-Tracking/blob/b6e3f78ae00765e7c5e7c817f5ecc4a5ea945552/snowplow-micro/schema/1-0-0.json#L1",
 "description": "Schema for JS basket",
 "self": {
 "vendor": "test.samuel",
