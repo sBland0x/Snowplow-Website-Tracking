@@ -2,9 +2,11 @@
 This is a file made for Snowplow, illustrating implementation of their software into my personal website. 
 
 First run 'java -jar snowplow-micro-1.2.1.jar --collector-config micro.conf --iglu iglu.json' in one CMD. 
+Access this here: http://localhost:9090/micro/all
 This step will start snowplow micro and start collecting data sent to it from the website.
 
 Then run 'http-server -p 8000' in another CMD 
+Access this here: http://127.0.0.1:8000/
 Node.JS is needed in order to run this which you can either install here https://nodejs.org/en/download/ 
 
 This program is a basic ecommerce website with a simple JS cart feature added in. The tracker is setup to track a range of different things and while improving my website I was messing around with different pre made tracking software created by snowplow which was great fun!
